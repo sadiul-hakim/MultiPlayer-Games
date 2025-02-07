@@ -1,5 +1,5 @@
-# Use Eclipse Temurin JDK 21.0.6 as base image
-FROM eclipse-temurin:21.0.6_10-jdk
+# Use the latest stable Java 21 LTS from Eclipse Temurin
+FROM eclipse-temurin:21-jdk
 
 # Set working directory
 WORKDIR /app
