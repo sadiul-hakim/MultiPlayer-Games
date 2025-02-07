@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    image: eclipse-temurin:21.0.6_10-jdk
+    container_name: multiplayer-tictactoe
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "9092:9092"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    command: ["java", "-jar", "target/MultiPlayerTicTacToe-0.0.1-SNAPSHOT.jar"]
